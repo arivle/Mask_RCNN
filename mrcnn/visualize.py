@@ -153,6 +153,18 @@ def display_instances(image, boxes, masks, class_ids, class_names,
 
         # Mask Polygon
         # Pad to ensure proper polygons for masks that touch image edges.
+        # This block is for colorize to specified class_id
+        if class_id == 1:
+            masked_image = apply_mask(masked_image, mask, [1,1,0], alpha=1)
+        elif class_id == 2:
+            masked_image = apply_mask(masked_image, mask, [1,0.6,0], alpha=1)
+        elif class_id == 3:
+            masked_image = apply_mask(masked_image, mask, [1,0,1], alpha=1)
+        elif class_id == 4:
+            masked_image = apply_mask(masked_image, mask, [1,0,0], alpha=1)
+        elif class_id == 5:
+            masked_image = apply_mask(masked_image, mask, [0,1,0], alpha=1)
+            
         padded_mask = np.zeros(
             (mask.shape[0] + 2, mask.shape[1] + 2), dtype=np.uint8)
         padded_mask[1:-1, 1:-1] = mask
