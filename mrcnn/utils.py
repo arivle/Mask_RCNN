@@ -1243,18 +1243,3 @@ def plot_confusion_matrix_from_data(y_test, predictions, columns=None, annot=Tru
         pred_val_axis=pred_val_axis, lw=lw, fmt=fmt)
     
     return tp, fp, fn
-
-    © 2022 GitHub, Inc.
-
-    Terms
-    Privacy
-    Security
-    Status
-    Docs
-    Contact GitHub
-    Pricing
-    API
-    Training
-    Blog
-    About
-
